@@ -25,6 +25,27 @@ void robotPrintMessage(void)
 }
 
 /**
+ * coolPrintAscii
+ *
+ */
+void coolPrintAscii(void) {
+  int i;
+  for (i = 0; i < 16; i++) {
+    int j;
+    for (j = 0; j < 17; j++) {
+      int c1 = (j - 8) / 2;
+      int c2 = -(c1 * c1) + 15;
+      if (i >= c2) {
+        printf("XX");
+      } else {
+        printf("..");
+      }
+    }
+    printf("\n");
+  }
+}
+
+/**
  * robotPrintAscii
  *
  */
